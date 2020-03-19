@@ -1,0 +1,47 @@
+{
+  "name": "devntd/teamleader",
+  "version": "1.0.0",
+  "description": "Laravel TeamLeader SDK",
+  "keywords": ["laravel", "teamleader"],
+  "homepage": "https://www.madeit.be",
+  "type": "library",
+  "license": "LGPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Tjebbe Lievens - Made I.T.",
+      "homepage": "https://www.madeit.be",
+      "email": "tjebbe.lievens@madeit.be"
+    }
+  ],
+  "require": {
+    "php": ">=7.2",
+    "illuminate/support": "5.*|^6.0|^7.0",
+    "illuminate/container": "5.*|^6.0|^7.0",
+    "nesbot/carbon": "^1.35|^2.0",
+    "guzzlehttp/guzzle": "^6.5"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "7.*|6.*",
+    "mockery/mockery": "0.9",
+    "friendsofphp/php-cs-fixer": "2.*",
+    "php-coveralls/php-coveralls": "^2.0"
+  },
+  "autoload": {
+    "classmap": [
+      "src/"
+    ],
+      "psr-4": {
+          "Devntd\\TeamLeader\\": "src/"
+      }
+  },
+  "extra": {
+       "laravel": {
+           "providers": [
+               "Devntd\\TeamLeader\\ServiceProvider\\TeamLeader"
+           ],
+            "aliases": {
+                "TeamLeader": "Devntd\\TeamLeader\\Facade\\TeamLeader"
+            }
+       }
+    }
+}
