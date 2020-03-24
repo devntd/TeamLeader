@@ -3,6 +3,7 @@
 namespace Devntd\TeamLeader;
 
 use Carbon\Carbon;
+use Devntd\TeamLeader\General\General;
 use Exception;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
@@ -293,6 +294,7 @@ class TeamLeader
 
     public function general()
     {
+        return new General($this);
     }
 
     public function crm()
